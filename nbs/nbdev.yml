@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "kedro-softfail-runner"
+  site-url: "https://noklam.github.io/kedro-softfail-runner"
+  description: "A custom implemnetion of Kedro Runner to support softfailing"
+  repo-branch: main
+  repo-url: "https://github.com/noklam/kedro-softfail-runner"
