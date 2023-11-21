@@ -147,7 +147,14 @@ class SoftFailRunner(SequentialRunner):
         hook_manager = hook_manager or _NullPluginManager()
         catalog = catalog.shallow_copy()
 
-        unsatisfied = pipeline.inputs() - set(catalog.list())
+        # Check which datasets used in the pipeline are in the catalog or match
+        # a pattern in the catalog
+        registered_ds = [ds for ds in pipeline.data_sets() if ds in catalog]
+
+        # Check if there are any input datasets that aren't in the catalog and
+        # don't match a pattern in the catalog.
+        unsatisfied = pipeline.inputs() - set(registered_ds)
+        
         if unsatisfied:
             raise ValueError(
                 f"Pipeline input(s) {unsatisfied} not found in the DataCatalog"
