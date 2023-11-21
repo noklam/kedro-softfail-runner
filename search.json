@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nSoftFailRunner\n\n SoftFailRunner (is_async:bool=False)\n\n[SoftFailRunner](https://noklam.github.io/kedro-softfail-runner/core.html#softfailrunner) is an AbstractRunner implementation that runs a Pipeline sequentially using a topological sort of provided nodes. Unlike the SequentialRunner, this runner will not terminate the pipeline immediately upon encountering node failure. Instead, it will continue to run on remaining nodes as long as their dependencies are fulfilled.\n\nimport"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "kedro-softfail-runner",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "kedro-softfail-runner",
+    "section": "Install",
+    "text": "Install\npip install kedro_softfail_runner"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "kedro-softfail-runner",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\nkedro run --runner=kedro_softfail_runner.SoftFailRunner"
+  }
+]
